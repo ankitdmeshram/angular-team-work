@@ -1,0 +1,10 @@
+<div  [ngClass]="isSidebarOpen ? 'menu-oc' : 'menu-cc'" (click)="toggleSidebar()">
+  <i class="fa-solid fa-bars"></i>
+</div>
+<div id="gs-sidebar" [ngClass]="isSidebarOpen ? 'gs-sidebar-open' : 'gs-sidebar-close'">
+  <app-sidebar></app-sidebar>
+</div>
+<div id="gs-body" [ngClass]="!isSidebarOpen ? 'gs-full-body' : 'gs-sem-body'">
+  <app-header></app-header>
+  <app-footer></app-footer>
+</div>

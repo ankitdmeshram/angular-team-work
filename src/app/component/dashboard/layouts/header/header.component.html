@@ -1,0 +1,15 @@
+<div class="gs-header">
+  <p>Dashboard</p>
+  <div class="gs-header-right" (click)="dispShow = !dispShow">
+    <img
+      src="https://www.directive.com/images/easyblog_shared/July_2018/7-4-18/b2ap3_large_totw_network_profile_400.jpg"
+      class="profile-img" alt="">
+  </div>
+  <div class="content">
+  </div>
+  <div class="auth-part" *ngIf="dispShow">
+    <ul>
+      <li>SignOut</li>
+    </ul>
+  </div>
+</div>

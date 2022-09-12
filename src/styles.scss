@@ -1,1 +1,59 @@
 /* You can add global styles to this file, and also import other style files */
+
+$sidebar-transition : 0.3s;
+$sidebar-width : 200px;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+#gs-sidebar {
+  background-color: black;
+  position: fixed;
+  height: 100vh;
+  width: $sidebar-width;
+  float: left;
+}
+.gs-sidebar-close {
+  transform: translateX(-$sidebar-width);
+  transition: $sidebar-transition;
+}
+.gs-sidebar-open {
+  transform: translateX(0);
+  transition: $sidebar-transition;
+}
+.menu-oc {
+  position: absolute;
+  left: $sidebar-width - 45px;
+  z-index: 2;
+  font-size: 20px;
+  margin: 10px;
+  cursor: pointer;
+  transition: $sidebar-transition;
+  color: white;
+}
+.menu-cc {
+  transition: $sidebar-transition;
+  position: absolute;
+  left: 10px;
+  z-index: 2;
+  font-size: 20px;
+  margin: 10px;
+  cursor: pointer;
+}
+#gs-body {
+  float: right;
+  background-color: rgb(247, 247, 247);
+  height: 100vh;
+  padding: 10px;
+}
+.gs-full-body {
+  width: 100vw;
+  transition: $sidebar-transition;
+}
+.gs-sem-body {
+  width: calc(100vw - $sidebar-width);
+  transition: $sidebar-transition;
+}
