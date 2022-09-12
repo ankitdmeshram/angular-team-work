@@ -1,4 +1,28 @@
-<h1>signin page</h1>
-<br>
-<a routerLink="dashboard">Dashboard</a>
-  
+<div class="auth">
+  <div class="auth-form">
+    <h3>Login Form</h3>
+    <form action="">
+      <div class="form-input">
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email">
+      </div>
+      <div class="form-input">
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password">
+      </div>
+      <div class="form-input">
+        <p> <a routerLink="forget-password"> Forget Password ?</a></p>
+      </div>
+      <div class="form-input">
+        <button class="gs-btn">Submit</button>
+      </div>
+      <div class="form-input">
+        <p class="align-center">Not A Member?
+          <a routerLink="register"> Register Now </a></p>
+        <p>
+          <a routerLink="dashboard">Dashboard</a>
+        </p>
+      </div>
+    </form>
+  </div>
+</div>
