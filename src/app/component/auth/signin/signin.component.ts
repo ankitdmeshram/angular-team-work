@@ -23,4 +23,8 @@ export class SigninComponent implements OnInit {
     this.auth.signIn(val);
   }
 
+  testing() {
+    this.auth.testing();
+  }
+
 }
