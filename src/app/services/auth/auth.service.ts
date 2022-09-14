@@ -19,6 +19,20 @@ export class AuthService {
     })
   }
 
+
+  allUser() {
+    return this.http.get("http://localhost:3000/api/users")
+  }
+
+  deleteUser(id:number) {
+    let idd = {
+      id: id
+    }
+    return this.http.post(`http://localhost:3000/api/deleteuser`, idd).subscribe(res =>
+      console.log(res)
+    )
+  }
+
   constructor(private http: HttpClient) { }
 
   app = initializeApp(environment.firebaseConfig);
@@ -29,8 +43,8 @@ export class AuthService {
     val.pass = "ankit@brokod.com";
     return createUserWithEmailAndPassword(this.auth, val.email, val.password)
       .then((res) => {
-        alert("user registered successfully");
-        return this.http.post("http://localhost:3000/api/signup", val).subscribe()
+        // alert("user registered successfully");
+        return this.http.post("https://webdeveloperinindia.in/api/signup", val).subscribe()
       })
       .catch((error) => {
         // console.log(error.code)
